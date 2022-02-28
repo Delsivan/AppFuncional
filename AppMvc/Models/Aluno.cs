@@ -19,7 +19,8 @@ namespace AppMvc.Models
         public string Email { get; set; }
         [Required(ErrorMessage = "O campo {0} é requerido")]
         public string CPF { get; set; }
-
+        [DisplayName("Descrição")]
+        public string Descricao { get; set; }
         public DateTime DataMatricula { get; set; }
         public bool Ativo { get; set; }
     }
