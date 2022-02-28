@@ -1,13 +1,13 @@
 ﻿@model AppMvc.Models.Aluno
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes de Aluno";
 }
 
-<h2>Details</h2>
+<h2>Detalhes de Aluno</h2>
 
 <div>
-    <h4>Aluno</h4>
+    <h4>Aluno(a) @Model.Nome</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -52,7 +52,9 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+    </div>
+</div>
